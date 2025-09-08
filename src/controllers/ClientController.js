@@ -2,7 +2,7 @@ const Client = require('../models/Client')
 
 module.exports = {
     async store(req, res) {
-        const {email, nome, rua, numero, bairro, cep, cidade, uf} = req.Body
+        const {email, nome, rua, numero, bairro, cep, cidade, uf} = req.body
         
         const mailExist = await Client.findOne({email}) 
 

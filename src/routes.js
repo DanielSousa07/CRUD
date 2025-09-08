@@ -4,7 +4,7 @@ const clientController = require('./controllers/ClientController')
 
 const routes = express.Router();
 
-routes.get('/insert', clientController.store)
+routes.post('/insert', clientController.store)
 
 
 module.exports = routes

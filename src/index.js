@@ -1,16 +1,22 @@
-const express =  require('express');
-const mongoose = require('mongoose');
-const routes = require('./routes')
+const express = require("express");
+const mongoose = require("mongoose");
+const routes = require("./routes");
 
 const App = express(); //Instanciando o App pra receber todas a propriedades do Express
-mongoose.connect('mongodb+srv://joseni:a123456@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA', 
-    {useNewUrlParser: true, 
-    useUnifiedTopoLogy: true,
-    useCreateIndex: true,
-}
-)
+mongoose
+  .connect(
+    "mongodb+srv://joseni:a123456@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA",
+    {
+      serverSelectionTimeoutMS: 30000, // Aumenta o tempo limite para 30 segundos
+    }
+  )
+  .then(() => {
+    console.log("Conexão com o MongoDB estabelecida com sucesso!");
+  })
+  .catch((err) => {
+    console.error("Erro ao conectar com o MongoDB:", err);
+  });
 App.use(express.json()); //Agora o programa entende que ta lendo a estrutura de dados express
-App.use(routes)
+App.use(routes);
 
-
-App.listen(3333, () => console.log("Server Running"))
+App.listen(3333, () => console.log("Server Running"));
