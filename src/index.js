@@ -5,7 +5,7 @@ const routes = require("./routes");
 const App = express(); //Instanciando o App pra receber todas a propriedades do Express
 mongoose
   .connect(
-    "mongodb+srv://joseni:a123456@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA",
+    "mongodb+srv://joseni:d123456@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA",
     {
       serverSelectionTimeoutMS: 30000, // Aumenta o tempo limite para 30 segundos
     }
