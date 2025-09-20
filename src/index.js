@@ -6,12 +6,10 @@ const App = express(); //Instanciando o App pra receber todas a propriedades do 
 mongoose
   .connect(
     "mongodb+srv://joseni:d123456@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA",
-    {
-      serverSelectionTimeoutMS: 30000, // Aumenta o tempo limite para 30 segundos
-    }
+    
   )
   .then(() => {
-    console.log("Conexão com o MongoDB estabelecida com sucesso!");
+    console.log("Conexão com o MongoDB estabelecida com sucesso!!!");
   })
   .catch((err) => {
     console.error("Erro ao conectar com o MongoDB:", err);
