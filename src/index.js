@@ -5,7 +5,7 @@ const routes = require("./routes");
 const App = express(); //Instanciando o App pra receber todas a propriedades do Express
 mongoose
   .connect(
-    "mongodb+srv://joseni:VnqnRlIpZy25K1fa@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA"
+    "mongodb+srv://joseni:SS8t3jHr3JZ7puTL@ifma.dkaigsn.mongodb.net/?retryWrites=true&w=majority&appName=IFMA"
   )
   .then(() => {
     console.log("Conexão com o MongoDB estabelecida com sucesso!!!");

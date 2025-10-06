@@ -2,12 +2,10 @@
 
 const express = require('express'); //Importando Express para usar o obejto router
 const clientController = require('./controllers/ClientController') //importando o arquivo que contém toda a lógica de como lidar com as requisições de clientes(como criar, ler, atualizar, excluir)
-const authController =require('./controllers/authController')
+
 
 const routes = express.Router(); //instanciando o objeto router a partir do express
 
-routes.post('/register', authController.register);
-routes.post('/login', authController.login);
 
 routes.post('/insert', clientController.store) //utilizando a rota post que é a mais comum para criar
 routes.get('/list', clientController.index) //Método get para obter e visualizar as informação, chamada para listar todos os clientes
